@@ -5,8 +5,8 @@ const lowercaseEl = document.getElementById("lowercase");
 const uppercaseEl = document.getElementById("uppercase");
 const numbersEl = document.getElementById("numbers");
 const symbolsEl = document.getElementById("symbols");
-const generateEl = document.getElementById("generate");
-
+const generateEl = document.getElementById("generate-password");
+const clipboardEl = document.getElementById("clipboard");
 const generateBtn = document.querySelector("#generate");
 
 const passCharacter = {
@@ -15,6 +15,28 @@ const passCharacter = {
     number: getRandomNumber,
     symbol: getRandomSymbol
 }
+
+// copy to clipboard function
+clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerHTML;
+
+    if(!password) {
+        return alert("There is nothing to copy!")
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    document.execCommand("copy");
+    textarea.remove();
+    alert("Your password has been copied to the clipboard! ")
+})
+
+// google how to copy to clip board
+
+
 
 function passwordTypes (){
     const length = +lengthEl.value;
