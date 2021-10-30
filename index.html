@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
   </head>
   <body>
     <div class="wrapper">
@@ -16,19 +18,46 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <form class="check-boxes">
+            <div class="checkbox">
+                <input type="number" id="length" min="8" max="128" value="20">
+                <label for="length">Password Length</label>
+            </div>
+            <div class="check-box">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Do you want to include lowercase letter?</label>
+            </div>
+            <div class="check-box">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase"> Do you want to include uppercase letters?</label>
+            </div>
+            <div class="check-box">
+                <input type="checkbox" id="numbers" checked>
+                <label for="symbols">Do you want to include numbers?
+                </label>
+            </div> 
+            <div class="check-box">
+                <input type="checkbox" id="symbols" checked>
+                <label for="cb4">Do you want to include symbols?</label>
+            </div>
+        </form>
         <div class="card-body">
           <textarea
             readonly
-            id="password"
+            id="result"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
-          ></textarea>
+          >
+          </textarea>
+          <button class="btn" id="clipboard">
+            <i class="far fa-copy" id="clippboard-button"></i> Copy Password to Clipboard
+          </button>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+        <div class="card-footer" id="generate">
+          <button id="generate-password" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
