@@ -7,7 +7,7 @@ If you need a new password and security is your main concern then look no furthe
 first decide how long you want your password to be. Next decide what type of characters you want to include in your password. Finally git generate password and there you have it. After that just click the nifty copy to clipboard button and you're all set. 
 
 ## App picture 
-
+https://github.com/ericc97/password-generator/blob/main/assets/password-generator-img.png
 
 
 ### Created by Eric Coleman 
