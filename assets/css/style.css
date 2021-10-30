@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #38628b;
 }
 
 .wrapper {
@@ -30,6 +30,10 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+header h1 {
+  color:ivory
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -38,8 +42,13 @@ header {
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 30px 40px;
+  
+}
+
+.card-header h2 {
+  text-align: center;
 }
 
 .card-header::after {
@@ -70,6 +79,12 @@ header {
   content: " ";
   display: block;
   clear: both;
+}
+
+.check-boxes{
+  vertical-align: middle;
+  position: relative;
+
 }
 
 .btn {
